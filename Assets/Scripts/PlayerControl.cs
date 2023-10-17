@@ -45,32 +45,35 @@ public class PlayerControl : MonoBehaviour
 
 
 
-        if (horizontalMove > 0.2f || horizontalMove < -0.2f)
+        //if (horizontalMove > 0.2f || horizontalMove < -0.2f)
+        //{
+        //    myAnim.SetBool("running", true);
+        //}
+        //else
+        //{
+        //    myAnim.SetBool("running", false);
+        //}
+
+        if (horizontalMove > 0.2f)
         {
             myAnim.SetBool("running", true);
+            myAnim.SetBool("moveRight", true);  // 玩家向右移动
+        }
+        else if (horizontalMove < -0.2f)
+        {
+            myAnim.SetBool("running", true);
+            myAnim.SetBool("moveRight", false); // 玩家向左移动
         }
         else
         {
             myAnim.SetBool("running", false);
+            // 不需要更改moveRight的值，因为玩家没有移动
         }
-
         float moveSpeed = horizontalMove * speed;
 
 
         //verticle movement//--------------------------------------------------------
-        //if(jump)
-        //{
-        //    myBody.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
-        //    jump = false;
-        //    jumpedInAir = true;
-        //}
-        //if (Input.GetButtonDown("Jump") && jumpedInAir && !grounded) //double jump
-        //{
-        //    myBody.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
-        //    myAnim.SetBool("jumping", true);
-        //    jumpedInAir = false;
-        //    Debug.Log("doubleJump");
-        //}
+
 
         if (myBody.velocity.y > 0)//if goingup
         {
