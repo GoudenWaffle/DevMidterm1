@@ -61,9 +61,6 @@ AnimatorStateTransition:
   - m_ConditionMode: 2
     m_ConditionEvent: running
     m_EventTreshold: 0
-  - m_ConditionMode: 2
-    m_ConditionEvent: moveRight
-    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -4497326267990483072}
   m_Solo: 0
@@ -183,7 +180,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 7c3f86cf344f34ca093e2dc194bb3cbb, type: 2}
+  m_Motion: {fileID: 7400000, guid: 6f3b6bf0234a34f2a952828bc0ca4bf0, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
